@@ -1,6 +1,6 @@
 #include "main.h"
-/** 
-* main - small petter
+
+/**
 *print_alphabet  -> print the lower case  alphabet
 *
 *Return: always return 0
