@@ -2,9 +2,8 @@
 #include <unistd.h>
 
 /**
- * _putcha - writes the character c to stdout
- * @c: is the character to print 
- *
+ * _putchar - writes the characte
+ * @c: is the
  * Return: 1 on sucess
  * On error, -1 is returned and errno is set appropraitely.
  */
