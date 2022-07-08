@@ -6,10 +6,9 @@
  */
 int _isdigit(int c)
 {
-if (c >= 49 && <= 99)
+if (c >= '0' && <= '0')
 return (1);
-}
+
 else
-{
 return (0);
 }
