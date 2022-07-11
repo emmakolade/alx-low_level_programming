@@ -1,4 +1,3 @@
-#include <stulib.h>
 #include <stdio.h>
 
 /**
