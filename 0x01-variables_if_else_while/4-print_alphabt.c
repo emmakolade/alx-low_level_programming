@@ -6,13 +6,15 @@
  */
 int main(void)
 {
-char a;
-for (a = 'a'; a <= 'z'; a++)
+char ch = 'a';
+while (ch <= 'z')
 {
-if (a == 'q' || a == 'e')
-continue;
+if (ch != 'e' && ch != 'q')
+{
+putchar(ch);
 }
-putchar (a);
-putchar ("\n");
+ch++;
+}
+putchar('\n');
 return (0);
 }
