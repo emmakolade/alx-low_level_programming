@@ -7,9 +7,8 @@
  */
 int main(void)
 {
-int num;
-for (num = 0; num < 10; num++)
-putchar((num % 10) + '0');
+int n;
+for (n = 0; n < 10; n++)
+p 
 putchar('\n');
-return (0);
 }
