@@ -7,23 +7,27 @@
  */
 int main(void)
 {
-int i;
-int j;
-for (i = 10; i <= 19; i++)
+int i = 48;
+int j = 48;
+while (j < 58)
 {
-for (j = 10; j <= 19; j++)
-if ((j % 10) > (i % 10))
+	i = 48;
+	while (i < 58)
 {
-putchar ((i % 10) + '0');
-putchar ((j % 10) + '0');
-if (i != 18 || j != 19)
+	if (j != i && j < i)
 {
-putchar(',');
-putchar(' ');
+	putchar(e);
+	putchar(i);
+	if (i == 57 && j == 56)
+{
+	break;
 }
+	putchar(',');
+	putchar(' ');
 }
+	i++;
 }
+	j++;
 }
-putchar('\n')
+putchar('\n');
 return (0);
-}
