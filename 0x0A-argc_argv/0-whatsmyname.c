@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * main - a programm that prints its name
  * @argc: the number of arguments supplied to the program
@@ -10,6 +10,6 @@
 
 int main(int argc, char *argv[])
 {
-	printf("argv = %s\n", argv[0]);
+	printf("%s\n", argv[0]);
 	return (0);
 }
