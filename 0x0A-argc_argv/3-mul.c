@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - program that multiplies two numbers
  * @argc: argumnets counter
@@ -8,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int index, mul = 1;
+	int index, multiplication = 1;
 
 	if (argc < 3)
 {
@@ -17,8 +18,8 @@ int main(int argc, char *argv[])
 }
 	for (index = 1; index < argc; index++)
 {
-	mul *= atoi(argv[index]);
+	multiplication = multiplication * atoi(argv[index]);
 }
-	printf("%d\n", mul);
+	printf("%d\n", multiplication);
 	return (0);
 }
