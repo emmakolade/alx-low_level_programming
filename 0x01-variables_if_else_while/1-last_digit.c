@@ -23,7 +23,7 @@ int main(void)
 		printf("Last digit of %zu is %zu and is 0\n", n, n % 10);
 	}
 
-	else ((n % 10) < 6 && (n % 10) != 0)
+	else
 	{
 		printf("Last digit of %zu is %zu and is less than 6 and not 0\n"n, n % 10);
 	}
