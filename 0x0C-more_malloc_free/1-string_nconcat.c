@@ -1,14 +1,26 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * string_nconcat - concatenates two strings
- * @s1: in the allocated memory. string 1
- * @s2: n bytes is present in s2. string 2
- * @n: the maximum number of bytes in s2 to concat to s1
+ * _strlen - calculates and return string length
+ * @string: string
+ * Return: string length
+ */
+int _strlen(char *string)
+{
+	int i;
+
+	for (i = 0; string[i] != '\0'; i++)
+		;
+	return (i);
+}
+/**
+ * string_nconcat - concatenate s1 and n bytes of s2
+ * @si: string 1
+ * @s2: string 2
+ * @n: n bytes to concat from string 2
  *
- * Return: NULL if the functions fails
+ * Return: pointer to concatenated string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
