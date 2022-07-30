@@ -16,7 +16,7 @@ int _strlen(char *string)
 }
 /**
  * string_nconcat - concatenate s1 and n bytes of s2
- * @si: string 1
+ * @s1: string 1
  * @s2: string 2
  * @n: n bytes to concat from string 2
  *
@@ -25,7 +25,9 @@ int _strlen(char *string)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat;
-	unsigned int n, i;
+	int num, len, i, j;
+
+	num = n;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -33,20 +35,23 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	for (i = 0; s1[i]; i++)
-		n++;
+	if (num < 0) /* account for negative n bytes*/
+		return (NULL);
+	if (num >= _strlen(s2)) /* entire length of s2 is used */
+		num = _strlen(s2);
 
-	concat = malloc(sizeof(char) * (n + 1));
+	len = _strlen(s1) + num + 1; /* '+1' acounts for all null pointers*/
+
+	concat = malloc(sizeof(*concat) * len);
 
 	if (concat == NULL)
 		return (NULL);
 
-	n = 0;
-
-	for (i = 0; s1[i]; i++)
-		concat[n++] = s2[i];
-
-	concat[n] = '\0';
+	for (i = 0; s1[i] != '\0'; i++)
+		concat[i] = s1[i];
+	for (j = 0; j < num; j++)
+		concat[i + j] = s2[j];
+	concat[i + j] = '\0';
 
 	return (concat);
 }
