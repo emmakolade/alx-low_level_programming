@@ -7,11 +7,9 @@
  */
 int add(int x, int y)
 {
-	int x;
-	int y;
 	int res;
 
-	res = add(x + y);
+	res = add(x, y);
 	_putchar(res);
 
 	return (res);
