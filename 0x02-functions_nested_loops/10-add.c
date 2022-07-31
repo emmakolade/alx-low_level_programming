@@ -11,7 +11,8 @@ int add(int x, int y)
 	int y;
 	int res;
 
-	res = add(x, y);
-		_putchar(res);
-return (res);
+	res = add(x + y);
+	_putchar(res);
+
+	return (res);
 }
