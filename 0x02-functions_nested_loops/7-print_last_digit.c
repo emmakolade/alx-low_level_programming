@@ -4,9 +4,8 @@
  * @n: the int to extract the last digit from
  * Return: always return 0
  */
-int print_last_digit(int)
+int print_last_digit(int n)
 {
-	int n;
 	int lastdig;
 
 	if (lastdig <= 10)
