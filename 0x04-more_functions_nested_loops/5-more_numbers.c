@@ -1,20 +1,18 @@
 #include "main.h"
 /**
- * more_numbers - print numbers 10 times
- * @x: the counter
+ * more_numbers - print the number ten times
  */
 void more_numbers(void)
 {
-	int x;
-	int n;
+	int n, x;
 
+	for (x = 0; x <= 10; x++)
 	{
-		for (x = 0; x <= 10; x++)
+		for (n = 0; n <= 14; n++)
 		{
-			for (n = 0; n <= 14; n++)
-			{
-				_putchar (n + '0');
-			}
+			if (n >= 10)
+				_putchar((n / 10) + '0');
+			_putchar((n % 10) + '0');
 		}
 		_putchar('\n')
 	}
