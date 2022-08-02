@@ -14,6 +14,6 @@ void print_array(int *a, int n)
   
   for (i = 0; i < n; i++)
   {
-    printf("elements of an arra of integers: %d, \n", a[i]);
+    printf"(%d, \n", a[i]);
   }
 }
