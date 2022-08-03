@@ -6,18 +6,6 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	_putchar("%s\n", name);
-}
-
-/**
- * main - entry point
- * Return: 0
- */
-
-int main(void)
-{
-	void (*f)(char *);
-
-	f = print_name;
+	if (f != NULL)
 	f(name);
 }
