@@ -1,8 +1,8 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 /**
- * prints_numbers - function that prints numbers
- * @seperator: the string to be printed btw numbers
+ * print_numbers - function that prints numbers
+ * @separator: the string to be printed btw numbers
  * @n: number of integers passed to the function
  *
  * Return: void
@@ -15,7 +15,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(ap, n);
 
-	for (i = 0; i < v; i++)
+	for (i = 0; i < n; i++)
 	{
 		pn = va_arg(ap, const unsigned int);
 		printf("%d\n", pn);
