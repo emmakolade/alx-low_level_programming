@@ -1,16 +1,15 @@
+section .data	;data section
+	msg db "Hello, Holberton",0xa
+	
 section .text ;text session
 	global _start
 _start:
-	mov edx, len 	;edx, ecx, ebx, eax are registers
-	mov ecx, msg
-	mov ebx, 1	; 1 and 4 are system call
-	mov eax, 4
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, msg
+	mov rdx, 13
 	int 0x080	;to call the kernel
 
-	mov eax, 1	;system call 1 (exit)
+	mov eax, 60
+	mov rdi, 0
 	int 0x080
-
-section .data	;data section
-	msg db "Hello, Holberton",0xa	;msg is message you can also name it anytin
-	len equ $ -msg			;db: defined bytes
-					;10 also 0xa is the same as '\n'
