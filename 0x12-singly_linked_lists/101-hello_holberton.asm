@@ -4,12 +4,12 @@ section .data	;data section
 section .text ;text session
 	global _start
 _start:
-	mov rax, 1
+	mov rax, 1 		;edx, ecx, ebx, eax are registers
 	mov rdi, 1
-	mov rsi, msg
+	mov rsi, msg		;1 and 4 are system call
 	mov rdx, 13
-	syscall
+	syscall			;to call the kernel
 
-	mov eax, 60
+	mov rax, 60
 	mov rdi, 0
 	syscall
