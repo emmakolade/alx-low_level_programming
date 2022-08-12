@@ -11,6 +11,6 @@ _start:
 	int 0x080
 
 section .data	;data section
-	msg db "Hello, Holberton", 10	;msg is message you can also name it anytin
+	msg db "Hello, Holberton", 0xa	;msg is message you can also name it anytin
 	len equ $ -msg			;db: defined bytes
 					;10 also 0xa is the same as '\n'
