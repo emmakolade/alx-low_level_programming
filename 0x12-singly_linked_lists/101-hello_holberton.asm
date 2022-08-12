@@ -8,8 +8,8 @@ _start:
 	mov rdi, 1
 	mov rsi, msg
 	mov rdx, 13
-	int 0x080	;to call the kernel
+	syscall
 
 	mov eax, 60
 	mov rdi, 0
-	int 0x080
+	syscall
