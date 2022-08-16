@@ -9,15 +9,15 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *next_item;
-	int retval = 0;
+	int retval;
 
-	if (*head != NULL)
+	if (*head == NULL)
 		return (0);
 
 	next_item = (*head)->n;
 	retval = (*head)->data;
-	*head = next_item;
 	free(*head);
+	*head = next_item;
 	
 	return (retval);
 }
