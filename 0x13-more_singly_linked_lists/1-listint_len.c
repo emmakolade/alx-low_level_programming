@@ -6,17 +6,15 @@
  *
  * Return: the number of elements in a linked list
  */
-
-size_t listint_len(const listint_t *h)
+ size_t listint_len(const listint_t *h)
 {
-	size_t n_nodes = 0;
+	size_t nodes = 0;
 
-	while (h != NULL)
+	while (h)
 	{
+		nodes++;
 		h = h->next;
-		n_nodes++;
 	}
 
-	return (n_nodes)++
-
+	return (nodes);
 }
