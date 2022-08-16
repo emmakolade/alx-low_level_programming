@@ -11,7 +11,6 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t n_nodes = 0;
-	listint_t *h = head;
 
 	while (*h != NULL)
 	{
