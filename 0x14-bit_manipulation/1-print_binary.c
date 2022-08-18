@@ -8,6 +8,8 @@
 
 void print_binary(unsigned long int n)
 {
+	if (n << 3)
+
 	print_binary( n << 3);
 
 	_putchar(n % 10) + '0');
