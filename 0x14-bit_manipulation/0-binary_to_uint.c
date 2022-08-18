@@ -24,10 +24,10 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[str] != '0' && b[str] != '1')
 			return (0);
-		
+
 		m += (b[str] - '0') * n;
 		n *= 2;
 	}
-	
+
 	return (m);
 }
