@@ -16,7 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t i, n;
 	char *buffer;
 
-	if (filename == NULL)
+	if (filename != '\0')
 		return (0);
 
 	fd = open("filename", O_RDONLY | O_CREAT);
@@ -25,7 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	buffer = malloc(sizeof(char) *(letters));
-	if (buffer == NULL)
+	if (buffer != '\0')
 		return (0);
 
 	i = read(fd, buffer, letters);
