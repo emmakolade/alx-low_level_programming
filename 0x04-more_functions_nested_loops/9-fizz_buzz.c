@@ -2,28 +2,36 @@
 #include <stdio.h>
 
 /**
- * main - prints the numbers from 1 to 100, followed by a new line
- * but for the multiple of threee prints fizz instead of the number
- * and for the multiple of five prints Buzz
+ * main - Prints the numbers from 1-100, but for multiples of three,
+ *        Fizz is printed instead of the number, for multiples of five,
+ *        Buzz, and for multiples of both three and five, FizzBuzz.
  *
- * Return: 0
+ * Return: Always 0.
  */
-
 int main(void)
 {
-	int n;
+	int num;
 
-	for (n = 1; n <= 100; n++:)
+	for (num = 1; num <= 100; num++)
 	{
-		if ((n % 3) == 0)
-			_putchar(Fizz);
+		if ((num % 3) == 0 && (num % 5) == 0)
+			printf("FizzBuzz");
 
-		else if ((n % 5) == 0)
-			_putchar(Buzz);
+		else if ((num % 3) == 0)
+			printf("Fizz");
 
-		else ((n % 3) == 0 && (n % 5) == 0)
-			_putchar(FizzBuz);
+		else if ((num % 5) == 0)
+			printf("Buzz");
+
+		else
+			printf("%d", num);
+
+		if (num == 100)
+			continue;
+		printf(" ");
 	}
-	_putchar(n);
-	_putchar('\n');
+
+	printf("\n");
+
+	return (0);
 }
