@@ -7,13 +7,14 @@
  *
  * Return: a pointer to dest
  */
-char *_memcpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int i;
+ void *_memcpy(void *dest, const void *src, size_t n)
+ {
+ 	unsigned int index;
+ 	unsigned char *destination = dest;
+ 	const unsigned char *source = src;
 
-	for (i = 0; i < n; i++)
-{
-	dest[i] = src[i];
-}
-	return (dest);
-}
+ 	for (index = 0; index < n; index++)
+ 		destination[index] = source[index];
+ 
+ 	return (dest);
+ }
